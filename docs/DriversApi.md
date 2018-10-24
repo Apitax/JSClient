@@ -21,28 +21,27 @@ Retrieve the blacklist in the driver
 
 ### Example
 ```javascript
-var ApitaxJsClient = require('apitax-js-client');
-var defaultClient = ApitaxJsClient.ApiClient.instance;
+import ApitaxJsClient from 'apitax-js-client';
+let defaultClient = ApitaxJsClient.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-var Bearer = defaultClient.authentications['Bearer'];
+let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApitaxJsClient.DriversApi();
+let apiInstance = new ApitaxJsClient.DriversApi();
 
-var driver = "driver_example"; // String | The driver to use for the request. ie. github
+let driver = "driver_example"; // String | The driver to use for the request. ie. github
 
 
-var callback = function(error, data, response) {
+apiInstance.getDriverBlacklist(driver, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getDriverBlacklist(driver, callback);
+});
 ```
 
 ### Parameters
@@ -74,28 +73,27 @@ Retrieve the config of a loaded driver
 
 ### Example
 ```javascript
-var ApitaxJsClient = require('apitax-js-client');
-var defaultClient = ApitaxJsClient.ApiClient.instance;
+import ApitaxJsClient from 'apitax-js-client';
+let defaultClient = ApitaxJsClient.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-var Bearer = defaultClient.authentications['Bearer'];
+let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApitaxJsClient.DriversApi();
+let apiInstance = new ApitaxJsClient.DriversApi();
 
-var driver = "driver_example"; // String | The driver to use for the request. ie. github
+let driver = "driver_example"; // String | The driver to use for the request. ie. github
 
 
-var callback = function(error, data, response) {
+apiInstance.getDriverConfig(driver, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getDriverConfig(driver, callback);
+});
 ```
 
 ### Parameters
@@ -127,25 +125,24 @@ Retrieve the catalog of drivers
 
 ### Example
 ```javascript
-var ApitaxJsClient = require('apitax-js-client');
-var defaultClient = ApitaxJsClient.ApiClient.instance;
+import ApitaxJsClient from 'apitax-js-client';
+let defaultClient = ApitaxJsClient.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-var Bearer = defaultClient.authentications['Bearer'];
+let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApitaxJsClient.DriversApi();
+let apiInstance = new ApitaxJsClient.DriversApi();
 
-var callback = function(error, data, response) {
+apiInstance.getDriverList((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getDriverList(callback);
+});
 ```
 
 ### Parameters
@@ -174,28 +171,27 @@ Retrieve the status of a loaded driver
 
 ### Example
 ```javascript
-var ApitaxJsClient = require('apitax-js-client');
-var defaultClient = ApitaxJsClient.ApiClient.instance;
+import ApitaxJsClient from 'apitax-js-client';
+let defaultClient = ApitaxJsClient.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-var Bearer = defaultClient.authentications['Bearer'];
+let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApitaxJsClient.DriversApi();
+let apiInstance = new ApitaxJsClient.DriversApi();
 
-var driver = "driver_example"; // String | The driver to use for the request. ie. github
+let driver = "driver_example"; // String | The driver to use for the request. ie. github
 
 
-var callback = function(error, data, response) {
+apiInstance.getDriverStatus(driver, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getDriverStatus(driver, callback);
+});
 ```
 
 ### Parameters
@@ -227,28 +223,27 @@ Retrieve the whitelist in the driver
 
 ### Example
 ```javascript
-var ApitaxJsClient = require('apitax-js-client');
-var defaultClient = ApitaxJsClient.ApiClient.instance;
+import ApitaxJsClient from 'apitax-js-client';
+let defaultClient = ApitaxJsClient.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-var Bearer = defaultClient.authentications['Bearer'];
+let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApitaxJsClient.DriversApi();
+let apiInstance = new ApitaxJsClient.DriversApi();
 
-var driver = "driver_example"; // String | The driver to use for the request. ie. github
+let driver = "driver_example"; // String | The driver to use for the request. ie. github
 
 
-var callback = function(error, data, response) {
+apiInstance.getDriverWhitelist(driver, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getDriverWhitelist(driver, callback);
+});
 ```
 
 ### Parameters

@@ -26,22 +26,21 @@ Authenticate with the API
 
 ### Example
 ```javascript
-var ApitaxJsClient = require('apitax-js-client');
+import ApitaxJsClient from 'apitax-js-client';
 
-var apiInstance = new ApitaxJsClient.ApitaxApi();
+let apiInstance = new ApitaxJsClient.ApitaxApi();
 
-var opts = { 
+let opts = { 
   'user': new ApitaxJsClient.UserAuth() // UserAuth | The user authentication object.
 };
 
-var callback = function(error, data, response) {
+apiInstance.authenticate(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.authenticate(opts, callback);
+});
 ```
 
 ### Parameters
@@ -73,33 +72,32 @@ Create a new user
 
 ### Example
 ```javascript
-var ApitaxJsClient = require('apitax-js-client');
-var defaultClient = ApitaxJsClient.ApiClient.instance;
+import ApitaxJsClient from 'apitax-js-client';
+let defaultClient = ApitaxJsClient.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-var Bearer = defaultClient.authentications['Bearer'];
+let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApitaxJsClient.ApitaxApi();
+let apiInstance = new ApitaxJsClient.ApitaxApi();
 
-var user = "user_example"; // String | Create user with this name
+let user = "user_example"; // String | Create user with this name
 
-var driver = "driver_example"; // String | The driver to use for the request. ie. github
+let driver = "driver_example"; // String | The driver to use for the request. ie. github
 
-var opts = { 
+let opts = { 
   'userCreate': new ApitaxJsClient.UserCreate() // UserCreate | The data needed to create this user
 };
 
-var callback = function(error, data, response) {
+apiInstance.createUser(user, driver, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.createUser(user, driver, opts, callback);
+});
 ```
 
 ### Parameters
@@ -133,33 +131,32 @@ Delete a user
 
 ### Example
 ```javascript
-var ApitaxJsClient = require('apitax-js-client');
-var defaultClient = ApitaxJsClient.ApiClient.instance;
+import ApitaxJsClient from 'apitax-js-client';
+let defaultClient = ApitaxJsClient.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-var Bearer = defaultClient.authentications['Bearer'];
+let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApitaxJsClient.ApitaxApi();
+let apiInstance = new ApitaxJsClient.ApitaxApi();
 
-var user = "user_example"; // String | Delete user with this name
+let user = "user_example"; // String | Delete user with this name
 
-var driver = "driver_example"; // String | The driver to use for the request. ie. github
+let driver = "driver_example"; // String | The driver to use for the request. ie. github
 
-var opts = { 
+let opts = { 
   'userDelete': new ApitaxJsClient.UserDelete() // UserDelete | The data needed to delete this user
 };
 
-var callback = function(error, data, response) {
+apiInstance.deleteUser(user, driver, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.deleteUser(user, driver, opts, callback);
+});
 ```
 
 ### Parameters
@@ -193,25 +190,24 @@ Retrieve the system config
 
 ### Example
 ```javascript
-var ApitaxJsClient = require('apitax-js-client');
-var defaultClient = ApitaxJsClient.ApiClient.instance;
+import ApitaxJsClient from 'apitax-js-client';
+let defaultClient = ApitaxJsClient.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-var Bearer = defaultClient.authentications['Bearer'];
+let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApitaxJsClient.ApitaxApi();
+let apiInstance = new ApitaxJsClient.ApitaxApi();
 
-var callback = function(error, data, response) {
+apiInstance.getConfig((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getConfig(callback);
+});
 ```
 
 ### Parameters
@@ -240,28 +236,27 @@ Retrieve the logs
 
 ### Example
 ```javascript
-var ApitaxJsClient = require('apitax-js-client');
-var defaultClient = ApitaxJsClient.ApiClient.instance;
+import ApitaxJsClient from 'apitax-js-client';
+let defaultClient = ApitaxJsClient.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-var Bearer = defaultClient.authentications['Bearer'];
+let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApitaxJsClient.ApitaxApi();
+let apiInstance = new ApitaxJsClient.ApitaxApi();
 
-var log = "log_example"; // String | Get this log
+let log = "log_example"; // String | Get this log
 
 
-var callback = function(error, data, response) {
+apiInstance.getLog(log, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getLog(log, callback);
+});
 ```
 
 ### Parameters
@@ -293,30 +288,29 @@ Retrieve a user
 
 ### Example
 ```javascript
-var ApitaxJsClient = require('apitax-js-client');
-var defaultClient = ApitaxJsClient.ApiClient.instance;
+import ApitaxJsClient from 'apitax-js-client';
+let defaultClient = ApitaxJsClient.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-var Bearer = defaultClient.authentications['Bearer'];
+let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApitaxJsClient.ApitaxApi();
+let apiInstance = new ApitaxJsClient.ApitaxApi();
 
-var user = "user_example"; // String | Get user with this name
+let user = "user_example"; // String | Get user with this name
 
-var driver = "driver_example"; // String | The driver to use for the request. ie. github
+let driver = "driver_example"; // String | The driver to use for the request. ie. github
 
 
-var callback = function(error, data, response) {
+apiInstance.getUser(user, driver, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getUser(user, driver, callback);
+});
 ```
 
 ### Parameters
@@ -349,28 +343,27 @@ Retrieve a list of users
 
 ### Example
 ```javascript
-var ApitaxJsClient = require('apitax-js-client');
-var defaultClient = ApitaxJsClient.ApiClient.instance;
+import ApitaxJsClient from 'apitax-js-client';
+let defaultClient = ApitaxJsClient.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-var Bearer = defaultClient.authentications['Bearer'];
+let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApitaxJsClient.ApitaxApi();
+let apiInstance = new ApitaxJsClient.ApitaxApi();
 
-var driver = "driver_example"; // String | The driver to use for the request. ie. github
+let driver = "driver_example"; // String | The driver to use for the request. ie. github
 
 
-var callback = function(error, data, response) {
+apiInstance.getUserList(driver, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getUserList(driver, callback);
+});
 ```
 
 ### Parameters
@@ -402,25 +395,24 @@ Refreshes login token using refresh token
 
 ### Example
 ```javascript
-var ApitaxJsClient = require('apitax-js-client');
-var defaultClient = ApitaxJsClient.ApiClient.instance;
+import ApitaxJsClient from 'apitax-js-client';
+let defaultClient = ApitaxJsClient.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-var Bearer = defaultClient.authentications['Bearer'];
+let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApitaxJsClient.ApitaxApi();
+let apiInstance = new ApitaxJsClient.ApitaxApi();
 
-var callback = function(error, data, response) {
+apiInstance.refreshToken((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.refreshToken(callback);
+});
 ```
 
 ### Parameters
@@ -449,33 +441,32 @@ Save a user
 
 ### Example
 ```javascript
-var ApitaxJsClient = require('apitax-js-client');
-var defaultClient = ApitaxJsClient.ApiClient.instance;
+import ApitaxJsClient from 'apitax-js-client';
+let defaultClient = ApitaxJsClient.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-var Bearer = defaultClient.authentications['Bearer'];
+let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApitaxJsClient.ApitaxApi();
+let apiInstance = new ApitaxJsClient.ApitaxApi();
 
-var user = "user_example"; // String | Save user with this name
+let user = "user_example"; // String | Save user with this name
 
-var driver = "driver_example"; // String | The driver to use for the request. ie. github
+let driver = "driver_example"; // String | The driver to use for the request. ie. github
 
-var opts = { 
+let opts = { 
   'userSave': new ApitaxJsClient.UserSave() // UserSave | The data needed to save this user
 };
 
-var callback = function(error, data, response) {
+apiInstance.saveUser(user, driver, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.saveUser(user, driver, opts, callback);
+});
 ```
 
 ### Parameters
@@ -509,25 +500,24 @@ Retrieve the system status
 
 ### Example
 ```javascript
-var ApitaxJsClient = require('apitax-js-client');
-var defaultClient = ApitaxJsClient.ApiClient.instance;
+import ApitaxJsClient from 'apitax-js-client';
+let defaultClient = ApitaxJsClient.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-var Bearer = defaultClient.authentications['Bearer'];
+let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApitaxJsClient.ApitaxApi();
+let apiInstance = new ApitaxJsClient.ApitaxApi();
 
-var callback = function(error, data, response) {
+apiInstance.systemStatus((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.systemStatus(callback);
+});
 ```
 
 ### Parameters

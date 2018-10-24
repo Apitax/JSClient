@@ -17,31 +17,30 @@ Execute a command
 
 ### Example
 ```javascript
-var ApitaxJsClient = require('apitax-js-client');
-var defaultClient = ApitaxJsClient.ApiClient.instance;
+import ApitaxJsClient from 'apitax-js-client';
+let defaultClient = ApitaxJsClient.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-var Bearer = defaultClient.authentications['Bearer'];
+let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApitaxJsClient.CommandtaxApi();
+let apiInstance = new ApitaxJsClient.CommandtaxApi();
 
-var driver = "driver_example"; // String | The driver to use for the request. ie. github
+let driver = "driver_example"; // String | The driver to use for the request. ie. github
 
-var opts = { 
+let opts = { 
   'execute': new ApitaxJsClient.Execute() // Execute | The data needed to execute this command
 };
 
-var callback = function(error, data, response) {
+apiInstance.command(driver, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.command(driver, opts, callback);
+});
 ```
 
 ### Parameters

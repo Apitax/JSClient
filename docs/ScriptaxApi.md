@@ -22,31 +22,30 @@ Create a new script
 
 ### Example
 ```javascript
-var ApitaxJsClient = require('apitax-js-client');
-var defaultClient = ApitaxJsClient.ApiClient.instance;
+import ApitaxJsClient from 'apitax-js-client';
+let defaultClient = ApitaxJsClient.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-var Bearer = defaultClient.authentications['Bearer'];
+let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApitaxJsClient.ScriptaxApi();
+let apiInstance = new ApitaxJsClient.ScriptaxApi();
 
-var driver = "driver_example"; // String | The driver to use for the request. ie. github
+let driver = "driver_example"; // String | The driver to use for the request. ie. github
 
-var opts = { 
+let opts = { 
   'scriptCreate': new ApitaxJsClient.ScriptCreate() // ScriptCreate | The data needed to create this script
 };
 
-var callback = function(error, data, response) {
+apiInstance.createDriverScript(driver, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.createDriverScript(driver, opts, callback);
+});
 ```
 
 ### Parameters
@@ -79,31 +78,30 @@ Delete a script
 
 ### Example
 ```javascript
-var ApitaxJsClient = require('apitax-js-client');
-var defaultClient = ApitaxJsClient.ApiClient.instance;
+import ApitaxJsClient from 'apitax-js-client';
+let defaultClient = ApitaxJsClient.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-var Bearer = defaultClient.authentications['Bearer'];
+let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApitaxJsClient.ScriptaxApi();
+let apiInstance = new ApitaxJsClient.ScriptaxApi();
 
-var driver = "driver_example"; // String | The driver to use for the request. ie. github
+let driver = "driver_example"; // String | The driver to use for the request. ie. github
 
-var opts = { 
+let opts = { 
   'scriptDelete': new ApitaxJsClient.ScriptDelete() // ScriptDelete | The data needed to delete this script
 };
 
-var callback = function(error, data, response) {
+apiInstance.deleteDriverScript(driver, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.deleteDriverScript(driver, opts, callback);
+});
 ```
 
 ### Parameters
@@ -136,31 +134,30 @@ Retrieve the contents of a script
 
 ### Example
 ```javascript
-var ApitaxJsClient = require('apitax-js-client');
-var defaultClient = ApitaxJsClient.ApiClient.instance;
+import ApitaxJsClient from 'apitax-js-client';
+let defaultClient = ApitaxJsClient.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-var Bearer = defaultClient.authentications['Bearer'];
+let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApitaxJsClient.ScriptaxApi();
+let apiInstance = new ApitaxJsClient.ScriptaxApi();
 
-var driver = "driver_example"; // String | The driver to use for the request. ie. github
+let driver = "driver_example"; // String | The driver to use for the request. ie. github
 
-var opts = { 
+let opts = { 
   'script': "script_example" // String | The script name.
 };
 
-var callback = function(error, data, response) {
+apiInstance.getDriverScript(driver, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getDriverScript(driver, opts, callback);
+});
 ```
 
 ### Parameters
@@ -193,28 +190,27 @@ Retrieve the script catalog
 
 ### Example
 ```javascript
-var ApitaxJsClient = require('apitax-js-client');
-var defaultClient = ApitaxJsClient.ApiClient.instance;
+import ApitaxJsClient from 'apitax-js-client';
+let defaultClient = ApitaxJsClient.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-var Bearer = defaultClient.authentications['Bearer'];
+let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApitaxJsClient.ScriptaxApi();
+let apiInstance = new ApitaxJsClient.ScriptaxApi();
 
-var driver = "driver_example"; // String | The driver to use for the request. ie. github
+let driver = "driver_example"; // String | The driver to use for the request. ie. github
 
 
-var callback = function(error, data, response) {
+apiInstance.getDriverScriptCatalog(driver, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getDriverScriptCatalog(driver, callback);
+});
 ```
 
 ### Parameters
@@ -246,31 +242,30 @@ Rename a script
 
 ### Example
 ```javascript
-var ApitaxJsClient = require('apitax-js-client');
-var defaultClient = ApitaxJsClient.ApiClient.instance;
+import ApitaxJsClient from 'apitax-js-client';
+let defaultClient = ApitaxJsClient.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-var Bearer = defaultClient.authentications['Bearer'];
+let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApitaxJsClient.ScriptaxApi();
+let apiInstance = new ApitaxJsClient.ScriptaxApi();
 
-var driver = "driver_example"; // String | The driver to use for the request. ie. github
+let driver = "driver_example"; // String | The driver to use for the request. ie. github
 
-var opts = { 
+let opts = { 
   'scriptRename': new ApitaxJsClient.ScriptRename() // ScriptRename | The data needed to rename this script
 };
 
-var callback = function(error, data, response) {
+apiInstance.renameDriverScript(driver, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.renameDriverScript(driver, opts, callback);
+});
 ```
 
 ### Parameters
@@ -303,31 +298,30 @@ Save a script
 
 ### Example
 ```javascript
-var ApitaxJsClient = require('apitax-js-client');
-var defaultClient = ApitaxJsClient.ApiClient.instance;
+import ApitaxJsClient from 'apitax-js-client';
+let defaultClient = ApitaxJsClient.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-var Bearer = defaultClient.authentications['Bearer'];
+let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-var apiInstance = new ApitaxJsClient.ScriptaxApi();
+let apiInstance = new ApitaxJsClient.ScriptaxApi();
 
-var driver = "driver_example"; // String | The driver to use for the request. ie. github
+let driver = "driver_example"; // String | The driver to use for the request. ie. github
 
-var opts = { 
+let opts = { 
   'scriptSave': new ApitaxJsClient.ScriptSave() // ScriptSave | The data needed to save this script
 };
 
-var callback = function(error, data, response) {
+apiInstance.saveDriverScript(driver, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.saveDriverScript(driver, opts, callback);
+});
 ```
 
 ### Parameters
