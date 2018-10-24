@@ -18,27 +18,28 @@ Retrieve the api catalog
 
 ### Example
 ```javascript
-import ApitaxJsClient from 'apitax-js-client';
-let defaultClient = ApitaxJsClient.ApiClient.instance;
+var ApitaxJsClient = require('apitax-js-client');
+var defaultClient = ApitaxJsClient.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-let Bearer = defaultClient.authentications['Bearer'];
+var Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new ApitaxJsClient.ApiApi();
+var apiInstance = new ApitaxJsClient.ApiApi();
 
-let driver = "driver_example"; // String | The driver to use for the request. ie. github
+var driver = "driver_example"; // String | The driver to use for the request. ie. github
 
 
-apiInstance.getDriverApiCatalog(driver, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.getDriverApiCatalog(driver, callback);
 ```
 
 ### Parameters
@@ -70,27 +71,28 @@ Retrieve the status of an api backing a driver
 
 ### Example
 ```javascript
-import ApitaxJsClient from 'apitax-js-client';
-let defaultClient = ApitaxJsClient.ApiClient.instance;
+var ApitaxJsClient = require('apitax-js-client');
+var defaultClient = ApitaxJsClient.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-let Bearer = defaultClient.authentications['Bearer'];
+var Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new ApitaxJsClient.ApiApi();
+var apiInstance = new ApitaxJsClient.ApiApi();
 
-let driver = "driver_example"; // String | The driver to use for the request. ie. github
+var driver = "driver_example"; // String | The driver to use for the request. ie. github
 
 
-apiInstance.getDriverApiStatus(driver, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.getDriverApiStatus(driver, callback);
 ```
 
 ### Parameters
