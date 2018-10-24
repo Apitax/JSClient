@@ -1,4 +1,4 @@
-# Apitax.AuthResponse
+# ApitaxJsClient.AuthResponse
 
 ## Properties
 Name | Type | Description | Notes

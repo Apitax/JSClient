@@ -1,4 +1,4 @@
-# Apitax.UserAuth
+# ApitaxJsClient.UserAuth
 
 ## Properties
 Name | Type | Description | Notes

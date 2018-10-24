@@ -1,4 +1,4 @@
-# Apitax.ScriptDelete
+# ApitaxJsClient.ScriptDelete
 
 ## Properties
 Name | Type | Description | Notes

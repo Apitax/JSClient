@@ -1,4 +1,4 @@
-# Apitax.ScriptRename
+# ApitaxJsClient.ScriptRename
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Apitax.Execute
+# ApitaxJsClient.Execute
 
 ## Properties
 Name | Type | Description | Notes

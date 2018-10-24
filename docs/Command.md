@@ -1,4 +1,4 @@
-# Apitax.Command
+# ApitaxJsClient.Command
 
 ## Properties
 Name | Type | Description | Notes

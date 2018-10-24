@@ -1,4 +1,4 @@
-# Apitax.UserDelete
+# ApitaxJsClient.UserDelete
 
 ## Properties
 Name | Type | Description | Notes

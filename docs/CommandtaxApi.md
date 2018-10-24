@@ -1,4 +1,4 @@
-# Apitax.CommandtaxApi
+# ApitaxJsClient.CommandtaxApi
 
 All URIs are relative to *https://localhost/apitax/2*
 
@@ -17,30 +17,31 @@ Execute a command
 
 ### Example
 ```javascript
-import Apitax from 'apitax';
-let defaultClient = Apitax.ApiClient.instance;
+var ApitaxJsClient = require('apitax-js-client');
+var defaultClient = ApitaxJsClient.ApiClient.instance;
 
 // Configure API key authorization: Bearer
-let Bearer = defaultClient.authentications['Bearer'];
+var Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new Apitax.CommandtaxApi();
+var apiInstance = new ApitaxJsClient.CommandtaxApi();
 
-let driver = "driver_example"; // String | The driver to use for the request. ie. github
+var driver = "driver_example"; // String | The driver to use for the request. ie. github
 
-let opts = { 
-  'execute': new Apitax.Execute() // Execute | The data needed to execute this command
+var opts = { 
+  'execute': new ApitaxJsClient.Execute() // Execute | The data needed to execute this command
 };
 
-apiInstance.command(driver, opts, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.command(driver, opts, callback);
 ```
 
 ### Parameters
